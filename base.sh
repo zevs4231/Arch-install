@@ -143,10 +143,10 @@ if [[ $menu == 1 ]]; then
     clear
     echo "Вот вывод PVDISPLAY:"
     pvdisplay
-    read -n 1 -s -r -p "Press any key to continue"
+    read -n 1 -s -r -p "Press any key to continue"conditions
     clear
     echo "Вот вывод VGDISPLAY:"
-    vgdisplay
+    vgdisplayconditions
     read -n 1 -s -r -p "Press any key to continue"
     clear
     echo "Вот вывод LVDISPLAY:"
@@ -297,7 +297,7 @@ elif [[ $menu == 2 ]]; then
     echo " Приступаем к созданию логического объема."
     echo ""
     lsblk -f
-    read -p "Укажите ЛВМ раздел(например sda3, nvme0n1p3):" home
+    read -p "Укажите ЛВМ раздел(например sda3, nvme0n1p3):" root
 
     pvcreate /dev/$root
     vgcreate vg_arch /dev/$root
