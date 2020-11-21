@@ -233,7 +233,7 @@ if [[ $menu == 1 ]]; then
 fi
 #####################################
 ###############часть вторая##########
-elif [[ $menu == 2 ]]; then 
+elif [[ $menu == 2 ]]; then
     clear
     echo "Добро пожаловать в установку ArchLinux режим GRUB-Legacy "
     lsblk -f
